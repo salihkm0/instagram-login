@@ -29,10 +29,19 @@ body{
     align-items: center;
     justify-content: center;
     height: 400px;
+    color: rgb(186, 186, 186);
+
+}
+.sub-container h1{
+    font-weight: 800;
+    color: rgb(230, 9, 9);
+}
+.sub-container h1 span{
+    color: rgb(255, 9, 247);
 }
 .sub-container h2{
     font-weight: 500;
-
+    margin-top: 40px;
 }
 .sub-container p{
     margin-top: 20px;
@@ -198,7 +207,7 @@ body{
     cursor: pointer;
 }
 .footer-container{
-    margin-top: 30px;
+    margin-top: -10px;
     padding: 20px 100px;
     display: flex;
     flex-direction: column;
